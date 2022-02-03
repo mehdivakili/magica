@@ -1,0 +1,159 @@
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(-45deg, $color2, $color1 65%) fixed;
+    height: 100vh;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.style-div {
+    background-color: $styleColor;
+    padding: $smallSpace;
+    border-radius: $border;
+
+    .info-icon {
+        width: 20px;
+        cursor: pointer;
+
+        svg {
+            fill: gray;
+        }
+    }
+
+    .bookmark-icon {
+        margin: 3px 0 0 1.1rem;
+        padding: 0;
+        background: none;
+        border: none;
+        box-sizing: border-box;
+        width: 14px;
+        height: max-content;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    .bookmark-icon:focus, .bookmark-icon:enabled, {
+        box-shadow: none !important;
+        border: none !important;
+        outline: 0;
+
+    }
+}
+
+.form-control {
+    border-radius: $border;
+}
+
+.btn {
+    border-radius: $border;
+    background-color: #ffffff99;
+    //font-weight: lighter;
+
+    padding: 5px 20px 5px 20px;
+    font-size: 16px;
+    height: 30px;
+}
+
+.btn:before, .btn:after {
+    content: none;
+}
+
+.login-form {
+    p {
+        margin-top: -5px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    width: 300px;
+    min-width: 300px;
+
+    .btn {
+        border-radius: $border;
+        background-color: $styleColor;
+        //font-weight: lighter;
+
+        padding: 5px 20px 5px 20px;
+        font-size: 16px;
+    }
+
+    .btn:before, .btn:after {
+        content: none;
+    }
+
+    .form-group {
+        margin-right: 0;
+        padding-left: 15px;
+
+        div {
+            width: 100%;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+.login-form .btn-gradient {
+    color: white;
+}
+
+.magica-container {
+    width: 310px;
+    min-width: 310px;
+    height: auto;
+
+    p {
+        text-align-last: justify;
+        font-size: 25px;
+        color: white;
+        width: 100%;
+    }
+
+    b {
+        font-size: 28px;
+    }
+
+    svg {
+        color: white !important;
+        margin-bottom: 20px;
+    }
+
+
+}
+
+.row {
+    flex-direction: row;
+}
+
+.con {
+    margin: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .con {
+        flex-direction: column-reverse;
+
+        .login-form {
+            //margin-top: $smallSpace;
+        }
+
+        .magica-container {
+            margin-top: 50px;
+            //margin-bottom: $smallSpace;
+        }
+
+        > * {
+            margin: auto;
+        }
+    }
+}

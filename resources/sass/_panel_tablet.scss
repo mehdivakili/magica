@@ -1,0 +1,94 @@
+@media screen and (max-width: 1200px) {
+    .style-div-scroll {
+        height: auto !important;
+
+        ul {
+            position: relative !important;
+            width: calc(100% - #{$smallSpace}) !important;
+            height: 100%;
+        }
+    }
+    .panel .home-div .other .ticket-div ul{
+        position: absolute !important;
+        width: calc(100% - #{2*$smallSpace}) !important;
+        height: calc(100% - 1rem - 24px - #{$smallSpace}) !important;
+    }
+    .panel {
+        height: auto !important;
+        min-height: calc(100vh - #{2*$smallSpace});
+
+        .content {
+            min-height: $minHeight;
+
+            .other {
+                /*                display: block;
+                                flex: none;*/
+
+            }
+
+            .orders-div {
+
+                flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+
+            }
+
+        }
+        .panel-menu{
+            min-height: $menuMinTabletHeight;
+        }
+        .home-div, .ticket-panel, .order-panel {
+            flex-direction: column;
+
+            .other, .new-ticket, .image-bg {
+                width: 100%;
+                margin-right: 0;
+
+                .account-and-notification-div {
+                    //display: none !important;
+                }
+
+                .brand {
+                    //min-height: 200px;
+                }
+            }
+
+            .orders-div, .your-tickets, .form{
+                width: 100%;
+                margin: $bigSpace 0 0 0;
+            }
+
+            textarea {
+                min-height: 200px !important;
+            }
+        }
+
+        .order-panel{
+            flex-direction: column-reverse;
+        }
+        .account-panel {
+            flex-direction: column;
+
+            .banners {
+                width: 100%;
+                margin-top: $bigSpace;
+
+                :first-child {
+                    margin: 0;
+                }
+            }
+
+        }
+
+
+        .order-panel {
+            img.pro-image {
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+                position: relative;
+            }
+        }
+
+    }
+}

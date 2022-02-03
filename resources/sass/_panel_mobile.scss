@@ -1,0 +1,249 @@
+//$smallSpaceMobile: $smallSpace/2;
+//$bigSpaceMobile: $bigSpace/2;
+
+@media screen and (max-width: 800px) {
+    //*{
+    //    font-size: 13px;
+    //}
+
+    html {
+        font-size: 12px;
+    }
+    #editUserModal {
+        .d-flex {
+            flex-direction: column;
+
+            > * {
+                margin-left: 0 !important;
+                margin-bottom: $smallSpace;
+            }
+        }
+    }
+    .panel {
+        min-height: calc(100vh - 2.2rem);
+        margin-bottom: $smallSpace;
+
+        .panel-menu, .panel-menu-holder {
+            display: none;
+        }
+
+        .content {
+            width: 100%;
+            min-height: auto !important;
+
+
+            .nav {
+                display: none;
+            }
+
+            .nav-mobile {
+                display: flex;
+            }
+
+            .home-div {
+
+
+                #wave {
+                    display: none;
+                }
+            }
+
+            main {
+                .order-panel {
+
+                    > * {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+    .style-div-scroll {
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (max-width: 560px){
+    .panel .home-div .other {
+        .account-and-notification-div {
+            flex-direction: column;
+
+            .account-div {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .ticket-div {
+                margin-right: 0 !important;
+                min-width: 100% !important;
+
+                ul {
+                    position: relative !important;
+                    width: calc(100% - #{$smallSpace}) !important;
+                    height: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 280px){
+    html{
+        font-size: 9px;
+    }
+}
+
+.content {
+
+
+    .nav-mobile {
+        padding-top: 15px;
+        height: 50px;
+
+        .bar-btn, .bar-btn:focus {
+            background: none;
+            border: none;
+            outline: none;
+            width: 20px;
+
+            svg {
+                width: 20px;
+            }
+        }
+
+        .upgrade-account {
+            width: 20px;
+            margin-top: -5px;
+
+            svg {
+                width: 20px;
+            }
+        }
+
+        .magica-container {
+            width: 100px;
+            margin-bottom: 0;
+            margin-top: -5px;
+            min-width: 20px;
+
+            svg {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+.panel-menu-mobile {
+    position: relative;
+    margin-top: $bigSpace;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+
+    .search-bar, .search-bar:hover, .search-bar:focus {
+        border-radius: $border;
+        padding-right: 30px;
+        width: 100%;
+        border-color: rgba(0, 0, 0, 0);
+        outline: 0;
+        height: 30px !important;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+    }
+
+    .magica-con {
+        padding: 50px;
+        position: relative;
+    }
+
+    .magica-container {
+        min-width: 10px
+    }
+
+    .magnifier-con {
+        width: 16px;
+        position: absolute;
+        //bottom: -26px;
+        //right: 5px;
+        top: 17px;
+        right: 17px;
+
+        svg {
+            width: 16px;
+            //height: 100px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin-top: $smallSpace;
+        width: 100%;
+        padding-right: 0;
+
+        li {
+            flex-wrap: nowrap;
+            margin-bottom: $bigSpace/2;
+            transition: background-color 0.4s, color 0.4s;
+            border-radius: $border;
+
+            .icon svg {
+                width: 18px;
+                height: 18px !important;
+                margin-left: $smallSpace/2;
+                margin-top: 4px;
+
+                path {
+                    fill: gray;
+                    transition: fill 0.4s;
+                }
+
+            }
+
+
+            a, a:hover {
+                color: rgba(3, 3, 3, 0.5);
+                text-decoration: none;
+
+
+                width: 300px;
+                padding-right: $smallSpace/2;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                font-size: 15px;
+                font-weight: 400;
+                border-radius: 0 28px 28px 0;
+                //padding-right: 5px;
+            }
+
+
+        }
+
+        li:hover, li.activate {
+
+            background-color: $styleColor;
+            color: #333;
+
+
+            path {
+                fill: #333 !important;
+            }
+        }
+
+
+    }
+}
